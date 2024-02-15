@@ -42,7 +42,7 @@ function render() {
     list = filterList;
   }
 
-  for (let i = 0; i < list.length; i++) {
+  for (let i = 0; i <list.length; i++) {
     if (list[i].isComplete) {
       result += `<div class="task task-done" id="${list[i].id}">
             <span>${list[i].content}</span>
@@ -91,7 +91,7 @@ function filter(e) {
     underLine.style.left = e.target.offsetLeft + "px";
     underLine.style.top =
       e.target.offsetTop + (e.target.offsetHeight - 4) + "px";
-  } 
+  }
 
   filterList = [];
   if (mode === "ongoing") {
@@ -111,6 +111,6 @@ function filter(e) {
 }
 
 function randomIDGenerator() {
-  
+
   return "_" + Math.random().toString(36).substr(2, 9);
 }
